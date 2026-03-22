@@ -1,6 +1,8 @@
-com/fintech/payout/gateway/GatewayServiceApplication.class
-com/fintech/payout/gateway/filter/RequestLoggingGlobalFilter.class
-com/fintech/payout/gateway/filter/JwtAuthGlobalFilter.class
-com/fintech/payout/gateway/filter/RoleAuthGlobalFilter.class
-com/fintech/payout/gateway/handler/FallbackHandler.class
-com/fintech/payout/gateway/filter/IpWhitelistGlobalFilter.class
+com/remit/mellonsecure/gateway/filter/JwtAuthGlobalFilter.class
+com/remit/mellonsecure/gateway/handler/FallbackHandler.class
+com/remit/mellonsecure/gateway/filter/RequestLoggingGlobalFilter.class
+com/remit/mellonsecure/gateway/filter/PayoutMerchantIdEnforcementFilter.class
+com/remit/mellonsecure/gateway/filter/RoleAuthGlobalFilter.class
+com/remit/mellonsecure/gateway/filter/IpWhitelistGlobalFilter.class
+com/remit/mellonsecure/gateway/filter/XMerchantIdValidationFilter.class
+com/remit/mellonsecure/gateway/GatewayServiceApplication.class

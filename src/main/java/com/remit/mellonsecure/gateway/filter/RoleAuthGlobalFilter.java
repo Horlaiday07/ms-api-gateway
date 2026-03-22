@@ -21,7 +21,7 @@ public class RoleAuthGlobalFilter implements GlobalFilter, Ordered {
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String path = exchange.getRequest().getPath().value();
 
-        if (path.startsWith("/api/admin/")) {
+        if (path.equals("/api/admin") || path.startsWith("/api/admin/")) {
             String role = exchange.getRequest().getHeaders().getFirst("X-Role");
             if (!"ADMIN".equals(role)) {
                 log.warn("Access denied: role={} for path={}, requires ADMIN", role, path);
@@ -29,7 +29,7 @@ public class RoleAuthGlobalFilter implements GlobalFilter, Ordered {
             }
         }
 
-        if (path.startsWith("/api/payout/")) {
+        if (path.equals("/api/payout") || path.startsWith("/api/payout/")) {
             String role = exchange.getRequest().getHeaders().getFirst("X-Role");
             if (role == null || (!"ADMIN".equals(role) && !"MERCHANT".equals(role))) {
                 log.warn("Access denied: role={} for path={}, requires ADMIN or MERCHANT", role, path);

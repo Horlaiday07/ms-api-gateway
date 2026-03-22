@@ -38,7 +38,7 @@ spring:
         - id: payout-route
           uri: http://localhost:8082
           predicates:
-            - Path=/api/payout/**
+            - Path=/api/payout,/api/payout/**
           filters:
             - name: CircuitBreaker
               args:
@@ -123,5 +123,5 @@ resilience4j:
 
 logging:
   level:
-    com.fintech.payout.gateway: DEBUG
+    com.remit.mellonsecure.gateway: DEBUG
     org.springframework.cloud.gateway: INFO

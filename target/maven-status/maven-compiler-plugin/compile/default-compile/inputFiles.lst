@@ -1,0 +1,6 @@
+/Users/macbook/melonsecureremit/ms-api-gateway/ms-gateway-service/src/main/java/com/fintech/payout/gateway/handler/FallbackHandler.java
+/Users/macbook/melonsecureremit/ms-api-gateway/ms-gateway-service/src/main/java/com/fintech/payout/gateway/filter/IpWhitelistGlobalFilter.java
+/Users/macbook/melonsecureremit/ms-api-gateway/ms-gateway-service/src/main/java/com/fintech/payout/gateway/filter/RequestLoggingGlobalFilter.java
+/Users/macbook/melonsecureremit/ms-api-gateway/ms-gateway-service/src/main/java/com/fintech/payout/gateway/GatewayServiceApplication.java
+/Users/macbook/melonsecureremit/ms-api-gateway/ms-gateway-service/src/main/java/com/fintech/payout/gateway/filter/RoleAuthGlobalFilter.java
+/Users/macbook/melonsecureremit/ms-api-gateway/ms-gateway-service/src/main/java/com/fintech/payout/gateway/filter/JwtAuthGlobalFilter.java

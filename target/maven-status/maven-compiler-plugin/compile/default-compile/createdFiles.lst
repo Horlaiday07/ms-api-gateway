@@ -1,0 +1,6 @@
+com/fintech/payout/gateway/GatewayServiceApplication.class
+com/fintech/payout/gateway/filter/RequestLoggingGlobalFilter.class
+com/fintech/payout/gateway/filter/JwtAuthGlobalFilter.class
+com/fintech/payout/gateway/filter/RoleAuthGlobalFilter.class
+com/fintech/payout/gateway/handler/FallbackHandler.class
+com/fintech/payout/gateway/filter/IpWhitelistGlobalFilter.class

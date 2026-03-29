@@ -38,7 +38,7 @@ spring:
         - id: payout-route
           uri: http://localhost:8082
           predicates:
-            - Path=/api/payout,/api/payout/**
+            - Path=/api/payout,/api/payout/**,/api/v1/payout,/api/v1/payout/**
           filters:
             - name: CircuitBreaker
               args:

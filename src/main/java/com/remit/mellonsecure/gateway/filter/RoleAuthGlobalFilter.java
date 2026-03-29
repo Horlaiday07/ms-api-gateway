@@ -29,7 +29,7 @@ public class RoleAuthGlobalFilter implements GlobalFilter, Ordered {
             }
         }
 
-        if (path.equals("/api/payout") || path.startsWith("/api/payout/")) {
+        if (isPayoutPath(path)) {
             String role = exchange.getRequest().getHeaders().getFirst("X-Role");
             if (role == null || (!"ADMIN".equals(role) && !"MERCHANT".equals(role))) {
                 log.warn("Access denied: role={} for path={}, requires ADMIN or MERCHANT", role, path);
@@ -38,6 +38,11 @@ public class RoleAuthGlobalFilter implements GlobalFilter, Ordered {
         }
 
         return chain.filter(exchange);
+    }
+
+    private static boolean isPayoutPath(String path) {
+        return (path.equals("/api/payout") || path.startsWith("/api/payout/"))
+                || (path.equals("/api/v1/payout") || path.startsWith("/api/v1/payout/"));
     }
 
     private Mono<Void> forbidden(ServerHttpResponse response) {

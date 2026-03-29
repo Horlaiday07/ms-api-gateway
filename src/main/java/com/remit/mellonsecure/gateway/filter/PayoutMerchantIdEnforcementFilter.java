@@ -42,6 +42,7 @@ public class PayoutMerchantIdEnforcementFilter implements GlobalFilter, Ordered 
 
     private boolean isPayoutOrAdminPath(String path) {
         return path.equals("/api/payout") || path.startsWith("/api/payout/")
+                || path.equals("/api/v1/payout") || path.startsWith("/api/v1/payout/")
                 || path.equals("/api/admin") || path.startsWith("/api/admin/");
     }
 

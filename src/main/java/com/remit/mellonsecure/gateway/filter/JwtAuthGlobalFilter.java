@@ -29,7 +29,7 @@ import java.util.List;
 public class JwtAuthGlobalFilter implements GlobalFilter, Ordered {
 
     private static final Logger log = LoggerFactory.getLogger(JwtAuthGlobalFilter.class);
-    private static final List<String> JWT_REQUIRED_PATHS = List.of("/api/payout", "/api/admin");
+    private static final List<String> JWT_REQUIRED_PATHS = List.of("/api/payout", "/api/v1/payout", "/api/admin");
 
     @Value("${jwt.secret}")
     private String secret;
